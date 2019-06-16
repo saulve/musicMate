@@ -23,7 +23,7 @@ class="mm--label-svg">
         </label>
         <input
           id="currentLocation"
-          :class="{'mm--input-error': isLocationInvalid}"
+          :class="{ 'mm--input-error': isLocationInvalid }"
           v-model="currentLocation"
           class="input border-rad--std settings__location margin-top-10"
           type="text"
@@ -94,10 +94,18 @@ class="recent-finds">
           class="recent-finds__item-box flex flex--column align--items"
         >
           <img :src="notification.popupObj.imageUrl">
-          <span class="recent-finds__item-box--artist">{{ notification.artist }}</span>
-          <span
-            class="recent-finds__item-box--date"
-          >{{ new Date(notification.datetime).toLocaleString("en-GB").split(",")[0] }}</span>
+          <span class="recent-finds__item-box--artist">
+            {{
+              notification.artist
+            }}
+          </span>
+          <span class="recent-finds__item-box--date">
+            {{
+              new Date(notification.datetime)
+                .toLocaleString("en-GB")
+                .split(",")[0]
+            }}
+          </span>
         </a>
       </div>
     </div>
@@ -132,7 +140,6 @@ export default {
     spinner: Spinner
   },
   data() {
-    console.log( this.$store.getters );
     return {
       compassImg,
       distanceImg,
@@ -148,23 +155,17 @@ export default {
     };
   },
   mounted() {
-    console.log( "1" );
-    console.log( document );
     this.locationEl = document.getElementById(
       "mmForm"
     ).elements.currentLocation;
-    console.log( "2" );
     // set current location here to avoid invalid form state
     this.currentLocation = this.$store.getters.currentLocation;
     this.notifications = this.$store.getters.notifications;
     this.showForm = !this.$store.getters.readyToRun;
-    console.log( "3" );
     // Prompt user to enter location at the start
     if ( !this.currentLocation ) {
-      console.log( "4" );
       this.$store.dispatch( CHANGE_MSG, NO_LOCATION );
     }
-    console.log( "5" );
     this.isLocationInvalid = this.locationEl.validity.valid;
   },
   methods: {
