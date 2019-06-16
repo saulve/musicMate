@@ -1,0 +1,14 @@
+export const SET_TOKENS = "setTokens";
+export const SET_USER = "setUser";
+export const SET_IS_APP_RUNNING = "setAppRunning";
+export const SET_TIMER = "setTimer";
+export const SET_LOCATION = "setLocation";
+export const SET_DISTANCE = "setDistance";
+export const SET_LOGGED_IN = "setLoggedIn";
+export const SET_CURRENT_MUSIC = "setCurrentMusic";
+export const SET_NOTIFICATIONS = "setNotification";
+export const SET_CURRENT_NOTIFICATION = "setCurrentNotification";
+export const SET_REMINDERS = "setReminders";
+export const SET_MESSAGE = "setMessage";
+export const SET_CYCLE = "setCycle";
+export const SET_CLUSTER = "setCluster";

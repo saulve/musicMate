@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page must render the component 1`] = `
+<div
+  class="login--box flex flex--column"
+>
+  <h2
+    class="text-center"
+  >
+    Welcome to MusicMate!
+  </h2>
+   
+  <button
+    class="flex align--items align--self button button--lrg bkg-green color--white"
+  >
+    <icon-stub
+      class="color--white"
+      name="brands/spotify"
+    />
+    Login with Spotify
+  
+  </button>
+</div>
+`;

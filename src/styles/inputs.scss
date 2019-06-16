@@ -1,0 +1,61 @@
+.button {
+  cursor: pointer;
+  &--std {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.95rem;
+    text-transform: lowercase;
+  }
+  &--lrg {
+    font-size: 0.85px;
+    line-height: 1;
+    padding: 11px 32px 9px;
+  }
+}
+.input {
+  transition: border 0.3s ease 0s;
+  background: $white;
+  border: 1px solid $gray;
+  outline: none;
+
+  &:hover {
+    border: 1px solid $blue;
+  }
+  &:invalid {
+    border-color: $red;
+    box-shadow: none;
+  }
+}
+
+input[type="range"] {
+  width: 13rem;
+  -webkit-appearance: none;
+
+  &:hover::-webkit-slider-thumb {
+    border-color: $blue;
+  }
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid $gray;
+    border-radius: 25px;
+  }
+  &::-webkit-slider-thumb {
+    transition: border-color 0.3s ease 0s;
+    border: 1px solid $gray;
+    height: 24px;
+    width: 8px;
+    border-radius: 50px;
+    background: $white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+  }
+  &:focus::-webkit-slider-runnable-track {
+    background: rgba(13, 13, 13, 0);
+  }
+  &:focus {
+    outline: none;
+  }
+}

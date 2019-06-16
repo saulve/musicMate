@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Page must not render confirmation window if the app is not ready to run 1`] = `
+<div
+  class="flex flex--column"
+>
+  <!---->
+   
+  <form
+    id="mmForm"
+  >
+    <div
+      class="margin-top-10"
+    >
+      <label
+        class="mm--label"
+        for="currentLocation"
+      >
+        
+          My location
+          
+        <img
+          class="mm--label-svg"
+          src=""
+        />
+      </label>
+       
+      <input
+        autocomplete="off"
+        class="input border-rad--std settings__location margin-top-10"
+        id="currentLocation"
+        name="currentLocation"
+        placeholder="e.g. London"
+        required="required"
+        title="Where should I look for concerts?"
+        type="text"
+      />
+    </div>
+     
+    <!---->
+     
+    <!---->
+     
+    <div
+      class="margin-top-10"
+    >
+      <label
+        class="mm--label"
+        for="travelDistance"
+      >
+        
+          Max distance
+          
+        <img
+          class="mm--label-svg"
+          src=""
+        />
+      </label>
+       
+      <input
+        class="margin-top-20"
+        id="travelDistance"
+        input-name="travelDistance"
+        max="1000"
+        min="1"
+        name="travelDistance"
+        required="required"
+        title="How far would you go for a concert?"
+        type="range"
+      />
+       
+      <span>
+         km
+      </span>
+    </div>
+  </form>
+   
+  <!---->
+   
+  <!---->
+   
+  <!---->
+</div>
+`;
+
+exports[`Main Page must render confirmation window if the app is ready to run 1`] = `
+<div
+  class="flex flex--column"
+>
+  <div
+    class="margin-top-10 flex flex--column align--items"
+  >
+    <h3
+      class="confirmation__status"
+    >
+      
+        The app is running
+        
+      <icon-stub
+        class="confirmation__heart"
+        name="heart"
+      />
+    </h3>
+     
+    <span
+      class="confirmation__message"
+    >
+      I'll notify you if I find any performances
+    </span>
+  </div>
+   
+  <form
+    id="mmForm"
+  >
+    <div
+      class="margin-top-10"
+    >
+      <label
+        class="mm--label"
+        for="currentLocation"
+      >
+        
+          My location
+          
+        <img
+          class="mm--label-svg"
+          src=""
+        />
+      </label>
+       
+      <input
+        autocomplete="off"
+        class="input border-rad--std settings__location margin-top-10"
+        id="currentLocation"
+        name="currentLocation"
+        placeholder="e.g. London"
+        required="required"
+        title="Where should I look for concerts?"
+        type="text"
+      />
+    </div>
+     
+    <!---->
+     
+    <!---->
+     
+    <div
+      class="margin-top-10"
+    >
+      <label
+        class="mm--label"
+        for="travelDistance"
+      >
+        
+          Max distance
+          
+        <img
+          class="mm--label-svg"
+          src=""
+        />
+      </label>
+       
+      <input
+        class="margin-top-20"
+        id="travelDistance"
+        input-name="travelDistance"
+        max="1000"
+        min="1"
+        name="travelDistance"
+        required="required"
+        title="How far would you go for a concert?"
+        type="range"
+      />
+       
+      <span>
+         km
+      </span>
+    </div>
+  </form>
+   
+  <span
+    class="button button--std input border-rad--std align--self margin-top-10"
+  >
+    Hide settings
+  </span>
+   
+  <!---->
+   
+  <!---->
+</div>
+`;

@@ -1,0 +1,90 @@
+{
+  "name": "musicMate",
+  "version": "0.0.13",
+  "description": "Browser extension that simplifies the discovery of performances by your favorite artists using Spotify Web API",
+  "author": "saulve",
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.vue src",
+    "build": "webpack --config=config/webpack.prod.js  --hide-modules",
+    "build:prod": "npm --no-git-tag-version version patch && webpack --config=config/webpack.prod.js  --hide-modules",
+    "watch:dev": "webpack --config=config/webpack.dev.js --hide-modules --watch",
+    "test": "jest --coverage",
+    "tdd": "jest --watch --verbose=false"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss|png|svg|jpg|svg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules(?![\\/]vue-awesome[\\/])/"
+    ],
+    "testURL": "http://localhost/"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "debounce": "^1.1.0",
+    "mini.css": "^3.0.0",
+    "raven-js": "^3.26.4",
+    "vue": "^2.5.13",
+    "vue-awesome": "^3.0.5",
+    "vue-router": "^3.0.1",
+    "vue-simple-spinner": "^1.2.8",
+    "vuex": "^3.0.1",
+    "vuex-webextensions": "^1.1.0",
+    "webextension-polyfill-ts": "^0.8.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/node": "^7.0.0-beta.56",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.47",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/runtime": "^7.0.0-beta.52",
+    "@vue/test-utils": "^1.0.0-beta.24",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "8.0.0-beta.3",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.11",
+    "dotenv": "^8.0.0",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.10.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.7.1",
+    "file-loader": "^1.1.11",
+    "flush-promises": "^1.0.2",
+    "jest": "^23.4.2",
+    "jest-transform-stub": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.5.3",
+    "prettier": "^1.17.1",
+    "prettier-eslint-cli": "^4.7.1",
+    "regenerator-runtime": "^0.12.1",
+    "sass-loader": "^7.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.0.1",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^15.2.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^4.8.3",
+    "webpack-chrome-extension-reloader": "^0.6.7",
+    "webpack-cli": "^2.1.4",
+    "webpack-merge": "^4.1.4"
+  }
+}

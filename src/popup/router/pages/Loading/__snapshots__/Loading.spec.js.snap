@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Page renders component 1`] = `
+<spinner-stub
+  fontsize="13"
+  linebgcolor="#eee"
+  linefgcolor="#2196f3"
+  linesize="3"
+  message=""
+  size="32"
+  spacing="4"
+  speed="0.8"
+  textfgcolor="#555"
+/>
+`;
