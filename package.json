@@ -28,7 +28,7 @@
     "testURL": "http://localhost/"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "debounce": "^1.1.0",
     "mini.css": "^3.0.0",
     "raven-js": "^3.26.4",
